@@ -1,0 +1,120 @@
+/* --- Visualization Page Styles --- */
+:root {
+  --primary: hsl(239, 100%, 67%);
+  --primary-light: #c3cdfd;
+  --white: #fff;
+  --shadow: 0 4px 24px rgba(99,102,241,0.10);
+  --radius: 18px;
+  --transition: 0.25s cubic-bezier(.4,0,.2,1);
+}
+
+body.visualisation-body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Montserrat', 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: linear-gradient(135deg, #60d2d5 0%, #ffffff 100%);
+  color: #22223b;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 32px;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 2em;
+  color: #22223b;
+}
+
+.visualisation-chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 60vh;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px 0;
+  margin: 36px auto 0 auto;
+}
+
+.visualisation-img {
+  width: 28vw;
+  max-width: 320px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 32px rgba(99,102,241,0.10);
+  display: block;
+  margin: 0 auto;
+}
+
+#back-btn {
+  display: inline-block;
+  padding: 7px 18px;
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-size: 0.98em;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(99,102,241,0.07);
+  transition: background var(--transition), transform var(--transition);
+  margin: 20px 0 0 20px;
+  min-width: 90px;
+  min-height: 34px;
+  text-align: center;
+}
+
+#back-btn:hover {
+  background: #bda2ef;
+  transform: scale(1.05);
+}
+
+#medicine-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin: 24px 0 0 0;
+}
+
+.medicine-btn {
+  display: inline-block;
+  padding: 7px 18px;
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-size: 0.98em;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(99,102,241,0.07);
+  transition: background var(--transition), transform var(--transition);
+  margin: 0 6px 6px 0;
+  min-width: 90px;
+  min-height: 34px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.medicine-btn:hover {
+  background: #bda2ef;
+  transform: scale(1.05);
+}
+
+@media (max-width: 700px) {
+  .visualisation-chart {
+    min-height: 40vh;
+    padding: 12px 0;
+  }
+  .visualisation-img {
+    width: 70vw;
+    max-width: 95vw;
+  }
+  #medicine-buttons {
+    gap: 6px;
+    margin: 16px 0 0 0;
+  }
+}
