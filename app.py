@@ -19,7 +19,9 @@ def index():
 @app.route('/style.css')
 def css():
     return send_file('style.css')
-    
+@app.route('/logo.jpg')
+def css():
+    return send_file('logo.jpg')
 @app.route('/script.js')
 def js():
     return send_file('script.js')
