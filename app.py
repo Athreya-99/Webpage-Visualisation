@@ -19,11 +19,13 @@ def index():
 @app.route('/style.css')
 def css():
     return send_file('style.css')
+    
 @app.route('/script.js')
 def js():
     return send_file('script.js')
+    
 @app.route('/visualization.js')
-def js():
+def viualization_js():
     return send_file('visualization.js')
 CORS(app)
 def sum_dosages(dosages):
