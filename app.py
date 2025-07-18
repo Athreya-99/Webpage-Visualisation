@@ -16,6 +16,15 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return send_file('index.html')
+@app.route('/style.css')
+def css():
+    return send_file('style.css')
+@app.route('/script.js')
+def js():
+    return send_file('script.js')
+@app.route('/visualization.js')
+def js():
+    return send_file('visualization.js')
 CORS(app)
 def sum_dosages(dosages):
     total = 0
