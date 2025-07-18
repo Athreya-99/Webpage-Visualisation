@@ -13,6 +13,9 @@ import os
 from flask_cors import CORS
 
 app = Flask(__name__)
+@app.route('/')
+def index():
+    return send_file('index.html')
 CORS(app)
 def sum_dosages(dosages):
     total = 0
