@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Patients | Health Visualizer</title>
+     <link rel="stylesheet" href="patients.css">
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<body>
+  <button id="back-btn" onclick="goBackToCities()">← Back to Cities</button>
+  <div class="header">
+    
+    <h1 class="title">VARIDOSE</h1>
+  </div>
+  
+  <h2>Patients in <span id="city-name"></span></h2>
+  <div class="grid" id="patient-list"></div>
+  <script src="script.js"></script>
+  <script>
+    renderPatients();
+  </script>
+</body>
+</html>

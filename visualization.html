@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Patient Heatmap | Varidose</title>
+    <link rel="stylesheet" href="visualization.css">
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+<body class="visualisation-body">
+  <button id="back-btn" onclick="goBackToPatients()">← Back to Patients</button>
+  <div class="header">
+    <h1 class="title">VARIDOSE</h1>
+  </div>
+
+<div class="top-bar">
+  
+  <h2>Patient Heatmap</h2>
+</div>
+  <div class="visualisation-chart">
+    <img id="heatmap-img" class="visualisation-img" alt="Heatmap will appear here">
+  </div>
+
+  <div id="medicine-buttons"></div>
+  <script src="visualization.js"></script>
+  <script>
+    renderHeatmap();
+    renderMedicineButtons(); // Add this to ensure buttons load
+  </script>
+</body>
+</html>
