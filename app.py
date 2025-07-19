@@ -15,6 +15,31 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
+@app.route('/')
+def index():
+    return send_from_directory('.', 'index.html')
+
+@app.route('/visualization.html')
+def visualization():
+    return send_from_directory('.', 'visualization.html')
+
+@app.route('/medicine-heatmap.html')
+def medicine_heatmap():
+    return send_from_directory('.', 'medicine-heatmap.html')
+
+@app.route('/patients.html')
+def patients():
+    return send_from_directory('.', 'patients.html')
+
+# ---- Serve Static Files (CSS, JS, Images) ----
+
+@app.route('/<path:filename>')
+def static_files(filename):
+    # This will serve any file in the root directory of your project
+    # (e.g., CSS, JS, JPG files, etc.)
+    if os.path.exists(filename):
+        return send_from_directory('.', filename)
+    abort(404)
 
 #CORRELATION-1
 def sum_dosages(dosages):
